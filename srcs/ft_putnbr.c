@@ -6,11 +6,11 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:11:59 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:33:49 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:53:07 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 void	ft_putnbr(int nb)
 {

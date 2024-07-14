@@ -6,14 +6,17 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:18:22 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 13:52:23 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:57:39 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "ft_printf.h"
 
-void	ft_percent(va_list args, char c)
+int	ft_percent(va_list args, char c)
 {
+	int	rvalue;
+	
+	rvalue = 0;
 	if (c == 'c')
 		ft_putchar(va_arg(args, int));
 	else if (c == 's')
@@ -34,6 +37,7 @@ int	ft_printf(const char *str, ...)
 {
 	va_list args;
 	int		i;
+	int		rvalue;
 
 	va_start(args, str);
 	i = 0;
@@ -41,7 +45,7 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			ft_percent(args, str[i + 1]);
+			rvalue += ft_percent(args, str[i + 1]);
 			i = i + 2;
 		}
 	}

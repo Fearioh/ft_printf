@@ -6,11 +6,11 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:37:00 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:44:00 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:53:03 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 void	ft_puthexa(unsigned int nb, char h)
 {

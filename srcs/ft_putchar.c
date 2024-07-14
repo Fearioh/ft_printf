@@ -6,11 +6,11 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:55:56 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:05:16 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:52:59 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 void		ft_putchar(int c)
 {
