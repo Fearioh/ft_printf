@@ -6,7 +6,7 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:11:59 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:22:12 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:33:49 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,4 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 	c = (nb % 10) + '0';
 	write(1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putnbr(128);
 }
