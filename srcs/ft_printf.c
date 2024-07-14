@@ -6,7 +6,7 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:18:22 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 13:49:22 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/14 13:52:23 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int	ft_printf(const char *str, ...)
 	while(str[i])
 	{
 		if (str[i] == '%')
+		{
 			ft_percent(args, str[i + 1]);
+			i = i + 2;
+		}
 	}
 }
