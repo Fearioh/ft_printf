@@ -6,7 +6,7 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:18:22 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/16 21:39:54 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:46:47 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	ft_percent(va_list args, char c)
 	else if (c == 'p')
 		rvalue = ft_print_ptr(va_arg(args, unsigned long long));
 	else if (c == 'd' || c == 'i')
-		rvalue = ft_putnbr(va_arg(args, int));
+		rvalue = ft_putnbr(va_arg(args, int), 0);
 	else if (c == 'u')
 		rvalue = ft_uputnbr(va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
-		rvalue = ft_puthexa(va_arg(args, unsigned int), c);
+		rvalue = ft_puthexa(va_arg(args, unsigned int), c, 0);
 	else if (c == '%')
 	{
 		write(1, "%", 1);

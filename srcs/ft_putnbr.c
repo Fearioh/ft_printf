@@ -6,13 +6,13 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:11:59 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:53:07 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:47:14 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int nb)
+int	ft_putnbr(int nb, int rvalue)
 {
 	char c;
 
@@ -25,4 +25,6 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 	c = (nb % 10) + '0';
 	write(1, &c, 1);
+	rvalue++;
+	return rvalue;
 }
