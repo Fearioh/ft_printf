@@ -6,13 +6,13 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:02:41 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:53:30 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:49:16 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
 	int i;
 
@@ -22,4 +22,5 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+	return i;
 }

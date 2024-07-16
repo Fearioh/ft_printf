@@ -6,7 +6,7 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:37:00 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/16 22:47:08 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:50:13 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_puthexa(unsigned int nb, char h, int rvalue)
 	char c;
 
 	if (nb / 16 != 0)
-		rvalue = ft_puthexa(nb / 16, h);
+		rvalue = ft_puthexa(nb / 16, h, rvalue);
 	if (nb % 16 < 10)
 		c = (nb % 16) + '0';
 	else if (nb % 16 >= 10 && h == 'x')
