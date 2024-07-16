@@ -6,7 +6,7 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:18:22 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/16 21:38:17 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/16 21:39:54 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,22 @@ int	ft_percent(va_list args, char c)
 	
 	rvalue = 0;
 	if (c == 'c')
-		ft_putchar(va_arg(args, int));
+		rvalue = ft_putchar(va_arg(args, int));
 	else if (c == 's')
-		ft_putstr(va_arg(args, char *));
+		rvalue = ft_putstr(va_arg(args, char *));
 	else if (c == 'p')
-		ft_print_ptr(va_arg(args, unsigned long long));
+		rvalue = ft_print_ptr(va_arg(args, unsigned long long));
 	else if (c == 'd' || c == 'i')
-		ft_putnbr(va_arg(args, int));
+		rvalue = ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
-		ft_uputnbr(va_arg(args, unsigned int));
+		rvalue = ft_uputnbr(va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
-		ft_puthexa(va_arg(args, unsigned int), c);
+		rvalue = ft_puthexa(va_arg(args, unsigned int), c);
 	else if (c == '%')
+	{
 		write(1, "%", 1);
+		rvalue += 1;
+	}
 	return rvalue;
 }
 
