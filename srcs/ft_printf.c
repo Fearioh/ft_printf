@@ -6,7 +6,7 @@
 /*   By: adelat <adelat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:18:22 by adelat            #+#    #+#             */
-/*   Updated: 2024/07/14 14:57:39 by adelat           ###   ########.fr       */
+/*   Updated: 2024/07/16 21:38:17 by adelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	ft_percent(va_list args, char c)
 		ft_puthexa(va_arg(args, unsigned int), c);
 	else if (c == '%')
 		write(1, "%", 1);
+	return rvalue;
 }
 
 int	ft_printf(const char *str, ...)
@@ -40,6 +41,7 @@ int	ft_printf(const char *str, ...)
 	int		rvalue;
 
 	va_start(args, str);
+	rvalue = 0;
 	i = 0;
 	while(str[i])
 	{
@@ -47,6 +49,12 @@ int	ft_printf(const char *str, ...)
 		{
 			rvalue += ft_percent(args, str[i + 1]);
 			i = i + 2;
+		}
+		else
+		{
+			write(1, &str[i], 1);
+			rvalue += 1;
+			i++;
 		}
 	}
 }
